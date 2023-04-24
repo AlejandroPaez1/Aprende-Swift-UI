@@ -6,55 +6,128 @@ struct ContentView: View {
 
     var body: some View {
         
-        NavigationView{
+     
+            NavigationView{
+                                // Vista principal de la aplicación
             
-
-                // Vista principal de la aplicación
-        
-    
-            VStack(alignment: .leading) {
-                Image(systemName: "swift")
-                    .imageScale(.large)
-                    .foregroundColor(.accentColor)
-                Text("Curso ios swift")
-                
-
-                NavigationLink(destination: secondView()){
-                    Text("Modulo de constructor")
-                }
-
-                NavigationLink(destination: alarmaView()){
-                    Text("Modulo alerta, Design compacto o regular")
-                }
-                
-                NavigationLink(destination: llamadaymensajeView()){
-                    Text("llamar, mensaje, moda")
-                }
- 
+                ScrollView(.vertical){
+                    
+                    VStack(alignment: .center) {
+                        
+                        Image(systemName: "swift")
+                            .imageScale(.large)
+                            .foregroundColor(.accentColor)
+                        
+                        Text("Curso ios swift")
+                        
+                        
+                        NavigationLink(destination: secondView()){
+                            
+                            ZStack {
                                 
-                NavigationLink(destination: TabViewMain()){
-                    Text("ejemplo tabView ")
-                }
-                
-                NavigationLink(destination: listasGrid()){
-                    Text("Ejemplo de lista grid")
-                }
-                
-                NavigationLink(destination: ListaView()){
-                    Text("Ejemplo de lista")
-                }
-                 
+                                Text("Modulo de constructor")
+                                    .font(.body)
+                                    .foregroundColor(.white)
+                                
+                                
+                            }.modifier(degradado())
+                        }
+                        
+                        
+                        
+                        ZStack {
+                            NavigationLink(destination: alarmaView()){
+                                Text("Modulo alerta, Design compacto o regular")      .font(.body)
+                                    .foregroundColor(.white)
+                            }
+                            
+                        }.modifier(degradado())
+                        
+                        
+                        
+                        ZStack {
+        
+                            NavigationLink(destination: llamadaymensajeView()){
+                                Text("llamar, mensaje, moda")
+                                    .font(.body)
+                                    .foregroundColor(.white)
+                            }
+                            
+                        }.modifier(degradado())
+                        
+                        
+                        
+                        ZStack {
+               
+                            
+                            NavigationLink(destination: TabViewMain()){
+                                Text("ejemplo tabView ")
+                                    .font(.body)
+                                    .foregroundColor(.white)
+                            }
+                            
+                            
+                        }.modifier(degradado())
+                        
+                        
+                        
+                        ZStack {
            
+                            NavigationLink(destination: listasGrid()){
+                                Text("Ejemplo de lista grid")
+                                    .font(.body)
+                                    .foregroundColor(.white)
+                            }
+                            
+                        }.modifier(degradado())
+                        
+                        
+                        ZStack {
                 
+                            
+                            NavigationLink(destination: ListaView()){
+                                Text("Ejemplo de lista")
+                                    .font(.body)
+                                    .foregroundColor(.white)
+                            }
+                            
+                        }.modifier(degradado())
+                        
+                        
+                        
+                        
+                        
+                    }
+                    //.frame(maxWidth: .infinity, alignment: .leading)
+//                    .frame(width: 700, height: 700)
+                    .padding(18.0)
+                    .navigationTitle("Aprende Swiftui")
+                    .border(.black)
+                }
+                   
                 
             }
-            .padding(18.0)
-            .navigationTitle("Aprende Swiftui")
-            .border(.black)
-             
-               
+            .navigationViewStyle(StackNavigationViewStyle())
+        }
             
-        }.navigationViewStyle(StackNavigationViewStyle())
+
+    
+}
+
+
+struct degradado : ViewModifier{
+    func body(content: Content) -> some View {
+        content
+            .frame(width: 450, height: 200)
+        .background(
+        LinearGradient(
+            gradient: Gradient(colors: [.blue, .purple]),
+            startPoint: .topLeading,
+            endPoint: .bottomTrailing
+        )
+        .blur(radius: 2)
+        )
+   
     }
 }
 

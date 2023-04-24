@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ListaView: View {
     var body: some View {
+        
         NavigationView{
             List(lista){ item in
                 NavigationLink(
