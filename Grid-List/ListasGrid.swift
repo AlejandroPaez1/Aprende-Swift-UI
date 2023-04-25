@@ -33,6 +33,7 @@ struct listasGrid: View {
                     }
                 }
             }.navigationTitle("grids")
+            
                 .toolbar{
                     ToolbarItem{
                         Menu("Opciones"){
