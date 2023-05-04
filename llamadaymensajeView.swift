@@ -10,6 +10,7 @@ struct llamadaymensajeView: View {
     let numero = "9622167188"
     let mensaje = "hola mundo mensaje"
     @State private var texto = ""
+    
     @State private var show = false
 
     

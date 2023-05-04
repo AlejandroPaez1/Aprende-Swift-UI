@@ -31,7 +31,7 @@ struct secondView: View {
         }
     }
     
-    @State var persona = Persona(nombre: "alejandro", edad: 23)
+    @State var persona = Persona(nombre: "pablo", edad: 23)
     
 
     

@@ -10,6 +10,7 @@ import SwiftUI
 
 struct VentanaModalView: View {
     @Environment(\.presentationMode) var back
+    
     var texto : String
     var texto2 = ""
     

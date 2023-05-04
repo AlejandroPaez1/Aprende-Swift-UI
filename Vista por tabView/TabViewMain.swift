@@ -21,7 +21,7 @@ struct TabViewMain: View {
             alarmaView().tabItem{
                 Label("vista alerta",systemImage:"exclamationmark.triangle")
             }
-        }
+        }.tabViewStyle(PageTabViewStyle())
             
     }
 }

@@ -20,11 +20,16 @@ struct alarmaView: View {
         
         VStack{
             Text("seccion de alerta")
+                .multilineTextAlignment(.center)
+                .padding([.top, .leading, .trailing], 11.0)
             
             Button {
                 isPresented = true
             } label: {
                 Text("alerta")
+                    .foregroundColor(.green)
+                    .bold()
+                
                     .alert(isPresented: $isPresented, content: {
                         Alert(title: Text("Titulo"),
                               message: Text("el error puede ser"),
@@ -35,16 +40,15 @@ struct alarmaView: View {
                     })
             }
             
-            
             Divider()
             
           Text("si es compacto o regular design")
             
-            if sizeClass == .compact && sizeClassV == .regular {
-                compactDesign()
-            }else{
-                regularDesign()
-            }
+//            if sizeClass == .compact && sizeClassV == .regular {
+//                compactDesign()
+//            }else{
+//                regularDesign()
+//            }
             Divider()
 
             

@@ -91,7 +91,7 @@ struct degradado : ViewModifier{
 
 func getLazyVGrid() -> some View {
     let verticalSizeClass = UIScreen.main.traitCollection.verticalSizeClass
-    let columns = verticalSizeClass == .regular ? 1 : 2
+    let columns = verticalSizeClass == .regular ? 2 : 3
     let gridItem: [GridItem] = Array(repeating: .init(.flexible()), count: columns)
 
     return LazyVGrid(columns: gridItem) {

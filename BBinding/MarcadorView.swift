@@ -48,6 +48,7 @@ struct MarcadorView: View {
                  Text("+1 Equipo A")
                      .font(.footnote)
                      .fontWeight(.semibold)
+                     .multilineTextAlignment(.center)
                      .padding()
                      .background(Color.blue)
                      .foregroundColor(.white)
